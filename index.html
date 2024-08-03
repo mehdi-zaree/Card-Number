@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="font/fontawesome/css/all.min.css">
+</head>
+<body>
+    <main class="bg-[#d9eaf9] w-[100%] py-6 ">
+        <div class="Payment-container   w-[568px]  mx-auto row  translate-y-16 [perspective:900px]">
+             <!--credit card wrapper-->
+            <div class="card-wrapper [transform-style:preserve-3d] bgImage shadow  w-[400px] h-[240px] mx-auto relative rounded-xl duration-500">
+
+                <!--back-->
+                <div class="card-back absolute top-0 left-0  row h-full  rounded-md bg-[#00000069] bgImage   [transform:translateZ(-1px)rotateY(180deg)]">
+                    <div class=" absolute top-0 left-0  row h-full  rounded-md bg-[#00000069]     ">
+                        <div class="w-full h-14 bg-[#060505E2] mt-8"></div>
+                        <div class="mx-auto">
+                            <span class="flex w-auto h-auto text-white ">cvv2</span>
+                            <div class="h-10 w-80 bg-white mx-auto mb-8 rounded flex items-center px-2" id="cvv2"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--front of the card-->
+                <div class="card-front absolute top-0 left-0 row h-full px-5 bg-[#00000069]  rounded-xl  ">
+                    <div class="card-icons w-full h-[33%]  py-2 flex justify-between">
+                        <div class="card-chip w-11 h-11 ">
+                            <img class="w-full h-full object-cover" src="chip.png" alt="">
+                        </div>
+                        <div class="card-type w-14 h-14 ">
+                            <img src="img/pasargad.png" class="w-full h-full object-cover text-2xl " id = 'bankImage'>
+                        </div>
+                    </div>
+                    <!--shadow box -->
+                    <div id="shadowBox" class = 'w-[110%] h-[110%]  opacity-0 absolute top-0 left-0 border-2   border-amber-50 bg-[#151414A1] rounded duration-300 ease-in-out'></div>
+
+                    <!--card number input-->
+                    <div class="card-number w-full  flex justify-evenly items-center text-[24px] text-white  transform translate-x-0 cursor-pointer p-2   ">
+                        <div class="first  w-14 h-5 flex items-center justify-center">
+                            <span>#</span>
+                            <span>#</span>
+                            <span>#</span>
+                            <span>#</span>
+                        </div>
+                        <div class="second  w-14 h-5 flex items-center justify-center">
+                            <span>#</span>
+                            <span>#</span>
+                            <span>#</span>
+                            <span>#</span>
+                        </div>
+                        <div class="third  w-14 h-5 flex items-center justify-center">
+                            <span>#</span>
+                            <span>#</span>
+                            <span>#</span>
+                            <span>#</span>
+                        </div>
+                        <div class="fourth  w-14 h-5 flex items-center justify-center">
+                            <span>#</span>
+                            <span>#</span>
+                            <span>#</span>
+                            <span>#</span>
+                        </div>
+                    </div>
+                    <!--card holder-->
+                    <div class="card-holder w-full   flex mt-8 " >
+                        <div class="owner w-3/4 h-[90%] uppercase  transform translate-x-0 p-2 cursor-pointer">
+                            <h6 class="text-gray-400 text-[10px] ">card holder</h6>
+                            <h2 class="text-white" >FULL NAME</h2>
+                        </div>
+                        <!--expiration date  -->
+                        <div class="expireDate w-1/4 transform translate-x-0 p-2 cursor-pointer ">
+                            <h6 class="uppercase text-gray-400 text-[10px]">expires</h6>
+                            <span class="exp text-white">MM</span>
+                            <span class="text-white">/</span>
+                            <span class="exp text-white transform  translate-y-5">YY</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+           <!--//form-->
+        <form class="card-information-container row    justify-center items-center ">
+            <div class="card-information-wrapper  w-[450px] bg-white p-5 h-full pt-28 rounded-2xl">
+                <label for="" class="-translate-x-10  w-full capitalize">card number</label>
+                 <!--card number inputs-->
+                <div class="number-wrapper w-full  flex justify-between ">
+                    <input class="w-20 px-3 rounded" type="text" maxlength="4">
+                    <input class="w-20 px-3 rounded" type="text" maxlength="4">
+                    <input class="w-20 px-3 rounded" type="text" maxlength="4">
+                    <input class="w-20 px-3 rounded" type="text" maxlength="4">
+                </div>
+               <!--card holder-->
+                <div class="holder-wrapper my-10 capitalize">
+                    <label>card holder</label>
+                    <input class="holder-input w-full" type="text">
+                </div>
+                <!--expiration and cvv2 parent div-->
+                <div class="flex justify-between ">
+                    <div class="expiration flex flex-wrap gap-2  w-1/2 ">
+                        <label for="" class="w-full">Expiration Date</label>
+                        <select name="" id="month">
+                            <option value="month" selected disabled>Month</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <select name="" id="year">
+                            <option value="year" selected disabled>Year</option>
+                            <option value="24">2024</option>
+                            <option value="25">2025</option>
+                            <option value="26">2026</option>
+                            <option value="27">2027</option>
+                            <option value="28">2028</option>
+                            <option value="29">2029</option>
+                            <option value="30">2030</option>
+                            <option value="31">2031</option>
+                            <option value="32">2032</option>
+                            <option value="33">2033</option>
+                            <option value="34">2034</option>
+                            <option value="35">2035</option>
+                        </select>
+                    </div>
+                    <div class="cvv2 ">
+                        <label for="" class="w-full align-middle">cvv2</label><br>
+                        <input type="text" class="w-16" maxlength="4">
+                    </div>
+                </div>
+            </div>
+        </form>
+    <!--side photo-->
+        <div class="sidephoto">
+            <div class="backef">
+
+            </div>
+            <div class="sidepic">
+                <figure>
+                    <img src="img/my-photo.webp" alt="">
+                </figure>
+
+                <div class="icons">
+                    <a href="https://instagram.com/mti_zri.dev" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linkedin.com/in/mehdi-zri" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Mehdi-Zaree" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://t.me/Mti_zri" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>

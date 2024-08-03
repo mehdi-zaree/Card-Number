@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: myfont;
+    src: url("font/Ubuntu-Regular.ttf");
+}
+.row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+main{
+    font-family: myfont;
+    input{
+        height: 40px;
+        border-radius: 5px;
+        box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+        outline: none;
+        padding: 0 12px 0 12px;
+
+
+    }
+    label{
+        color: #9ca3af;
+    }
+   
+    select{
+        height: 40px;
+        box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+        border-radius: 5px;
+
+
+    }
+    .sidephoto{
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+
+        >.sidepic,.backef{
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.66);
+            position: absolute;
+
+            overflow: hidden;
+        }
+        >.backef{
+            animation: blob2 10s infinite ease-in-out;
+            backdrop-filter: blur(10px);
+        }
+        >.sidepic{
+            animation: blob 10s infinite ease-in-out;
+            border-radius: 49% 51% 70% 30% / 30% 44% 56% 70% ;
+            >figure{
+                width: 100%;
+                height: 100%;
+                >img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            &:hover>.icons,&:hover a{
+                opacity: 1;
+                display: flex;
+            }
+        }
+        .icons{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            transition: .4s;
+            opacity: 0;
+            background-color: rgba(240, 248, 255, 0.327);
+            overflow: hidden;
+
+            >a{
+                width: 30px;
+                height: 30px;
+                color: black;
+                border-radius: 5px;
+                display: none;
+                justify-content: center;
+                align-items: center;
+                transition: .2s;
+                &:nth-of-type(1):hover{
+                    background-color:#bc2a8d ;
+                    color: white;
+                }
+                &:nth-of-type(2):hover{
+                    background-color:#0A66C2 ;
+                    color: white;
+                }
+                &:nth-of-type(3):hover{
+                    background-color:#6e5494 ;
+                    color: white;
+                }
+                &:nth-of-type(4):hover{
+                    background-color: #0088cc;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+@keyframes blob {
+    0%{border-radius: 34% 66% 37% 63% / 54% 42% 58% 46%  ;}
+    25%{border-radius: 68% 32% 63% 37% / 34% 69% 31% 66%  ;}
+    50%{border-radius: 26% 74% 57% 43% / 42% 24% 76% 58% ;}
+    75%{border-radius: 75% 25% 47% 53% / 36% 69% 31% 64% ;}
+    100%{border-radius: 34% 66% 37% 63% / 54% 42% 58% 46%  ;}
+}
+@keyframes blob2 {
+    0%{border-radius: 64% 36% 61% 39% / 31% 59% 41% 69%  ;}
+    25%{border-radius:26% 74% 31% 69% / 78% 24% 76% 22% ;}
+    50%{border-radius:19% 81% 47% 53% / 64% 47% 53% 36%  ;}
+    75%{border-radius: 54% 46% 23% 77% / 76% 25% 75% 24% ;}
+    100%{border-radius: 64% 36% 61% 39% / 31% 59% 41% 69%  ;}
+}
+
+
+
+@keyframes numberIn {
+    0%{
+    transform: translateZ(0px);
+        opacity: 1;
+    }
+    25%{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes numberOut {
+    0%{
+        transform: translateZ(0px);
+        opacity: 1;
+    }
+    25%{
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+
+    }
+}
+
+
+
+
