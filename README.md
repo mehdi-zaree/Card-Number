@@ -9,7 +9,7 @@
   <a href="https://github.com/mehdi-zaree/Card-Number/issues" text-align='center'>Request features</a> 
 </div>
 </br>
-![Screenshot from 2024-10-01 11-59-33](https://github.com/user-attachments/assets/2bb3781f-ccd7-40f0-a219-c34e3b30fa84)
+
 
 
 
