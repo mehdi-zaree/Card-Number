@@ -11,6 +11,9 @@
 </br>
 
 
+![Screenshot from 2024-10-01 11-59-33](https://github.com/user-attachments/assets/782e6270-ccdf-48ce-b964-a8b2c2804bbe)
+
+
 
 
 
@@ -19,25 +22,13 @@
 
 This section should list any major frameworks/libraries that bootstrap your project. Leave any add-ons/plugins for the acknowledgments section. Here are a few examples.
 
-* 	![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+* 	![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+* 	![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+* 	![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 
 
-<!-- GETTING STARTED -->
-## Getting Started
-1. First
- ```sh
-   pnpm i
-   ```
-2. then write 
- ```sh
-   pnpm dev
-    #or
-   pnpm run dev
-   ```
 
-
-open project on port: http://localhost:5173/
 <!-- CONTACT -->
 ## Contact
 
